@@ -16,7 +16,6 @@ public final class BubbleSort {
     private static final int MAX_ARRAYS = 100;
     /**
      * This is to satisfy the style checker.
-     *
      * @exception IllegalStateException Utility class.
      * @see IllegalStateException
      */
@@ -39,16 +38,24 @@ public final class BubbleSort {
                 int randomNum = random.nextInt(MAX_VALUE);
                 numArray[counter] = randomNum;
             }
-            inputFile.write("Array " + (counterArray + 1) + " Unsorted: " + Arrays.toString(numArray) + "\n\n");
+            inputFile.write("Array " + (counterArray + 1)
+                    + " Unsorted: " + Arrays.toString(numArray) + "\n\n");
             bubbleSort(numArray);
-            outputFile.write("Array " + (counterArray + 1) + " Sorted:   " + Arrays.toString(numArray) + "\n\n");
+            outputFile.write("Array " + (counterArray + 1)
+                    + " Sorted:   " + Arrays.toString(numArray) + "\n\n");
         }
         inputFile.close();
         outputFile.close();
     }
+    /**
+     * This method sorts an array using the bubble sort algorithm.
+     *
+     * @param numArray The array to be sorted.
+     */
     public static void bubbleSort(final int numArray[]) {
         for (int counter = 0; counter < numArray.length - 1; counter++) {
-            for (int innCounter = 0; innCounter < numArray.length - counter - 1; innCounter++) {
+            for (int innCounter = 0;
+             innCounter < numArray.length - counter - 1; innCounter++) {
                 if (numArray[innCounter] > numArray[innCounter + 1]) {
                     int temp = numArray[innCounter];
                     numArray[innCounter] = numArray[innCounter + 1];
