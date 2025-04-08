@@ -12,10 +12,11 @@ public final class BubbleSort {
     private static final int MAX_SIZE = 6;
     /** Defining MAX_VALUE. */
     private static final int MAX_VALUE = 100;
-
+    /** Defining MAX_ARRAYS. */
     private static final int MAX_ARRAYS = 100;
     /**
      * This is to satisfy the style checker.
+     * 
      * @exception IllegalStateException Utility class.
      * @see IllegalStateException
      */
@@ -52,7 +53,7 @@ public final class BubbleSort {
      *
      * @param numArray The array to be sorted.
      */
-    public static void bubbleSort(final int numArray[]) {
+    public static void bubbleSort(final int [] numArray) {
         for (int counter = 0; counter < numArray.length - 1; counter++) {
             for (int innCounter = 0;
              innCounter < numArray.length - counter - 1; innCounter++) {
